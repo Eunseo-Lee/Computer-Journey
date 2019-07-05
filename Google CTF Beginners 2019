@@ -1,11 +1,27 @@
-##### Enter Space-Time Coordinates (Misc)
+### Enter Space-Time Coordinates (Misc)
+
+![Enter Space-Time Coordinates](link)
+
+The challenge gives us an attachment with 2 files.
+`log.txt` and  `rand2`
+
+The file `log.txt` contains what seems to be 5 different coordinates. 
+```markdown
+0: AC+79 3888{6652492084280_198129318435598}
+1: Pliamas Sos{276116074108949_243544040631356}
+2: Ophiuchus{11230026071572_273089684340955}
+3: Pax Memor -ne4456 Hi Pro{21455190336714_219250247519817}
+4: Camion Gyrin{235962764372832_269519420054142}
+```
 
 
 
-##### Satellite (Networking)
 
-##### Home Computer (Forensics)
 
-##### Work Computer (Sandbox)
+### Satellite (Networking)
 
-##### Government Agricultural Network (Web)
+### Home Computer (Forensics)
+
+### Work Computer (Sandbox)
+
+### Government Agricultural Network (Web)
