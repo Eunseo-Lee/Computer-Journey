@@ -32,6 +32,7 @@ There is a Google documents link where rest of the config data lies, and that sh
 This is what shows up on the Google doc, and it seems to be a base64 encoded string (*the two '=' equal signs at the end gave it away*).
 
 After decoding the message, an interesting piece of text came up, which led to my next clue. 
+
 `
 Username: wireshark-rocks
 Password: start-sniffing!
