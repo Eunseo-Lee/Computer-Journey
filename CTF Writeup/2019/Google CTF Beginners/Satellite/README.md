@@ -39,4 +39,35 @@ Password: start-sniffing!
 `
 
 Wireshark is a network packet analyser. Which led to my next question: How was Wireshark related to this problem?
-I thought back to the unusually big file size of 'init_sat'. Maybe, it was doing something in the background where I 
+I thought back to the unusually big file size of 'init_sat'. Maybe it was doing something in the background in which
+I can find out what, by running Wireshark while executing 'init.sat'. 
+
+
+
+
+
+
+
+#### Unintended Solution:
+
+The `strings` command works with this challenge as well, and I'm pretty sure this is an unintended solution. 
+I solved the problem through this method first, then tried the method with Wireshark afterwards. 
+Once we run the command `strings init_sat | grep satellite`, we get a large block of results. 
+
+![netcat](https://github.com/Eunseo-Lee/Computer-Journey/blob/master/CTF%20Writeup/2019/Google%20CTF%20Beginners/Satellite/Screenshots/netcat.PNG)
+
+However, there is something that catches my eye. I've underlined the important part in red. 
+This... looks like a netcat address! Lets try connecting.
+`nc satellite.ctfcompetition.com 1337`
+
+![flag](https://github.com/Eunseo-Lee/Computer-Journey/blob/master/CTF%20Writeup/2019/Google%20CTF%20Beginners/Satellite/Screenshots/flag.PNG)
+
+The flag takes the place of what was obscured with asterisks when we first connected. At first, I tried the 
+`string` command first to test my luck if I'd get the flag on my first try. After trying various words with the `grep` command
+I went with 'satellite', and it worked. Imagine my excitement when I came by the netcat address. 
+
+This was a shortcut to the solution, but I was unsatisfied with the way I solved it, and went back to do it the proper way. 
+
+##### Flag: CTF{4efcc72090af28fd33a2118985541f92e793477f} 
+
+
