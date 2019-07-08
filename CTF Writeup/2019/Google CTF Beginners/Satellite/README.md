@@ -42,13 +42,18 @@ Wireshark is a network packet analyser. Which led to my next question: How was W
 I thought back to the unusually big file size of 'init_sat'. Maybe it was doing something in the background in which
 I can find out what, by running Wireshark while executing 'init.sat'. 
 
+![captured packets](https://github.com/Eunseo-Lee/Computer-Journey/blob/master/CTF%20Writeup/2019/Google%20CTF%20Beginners/Satellite/Screenshots/capture.PNG)
 
+I ran Wireshark while executing 'init.sat', and found out that there are indeed packets being sent over the network. While briefly skimming through each individual packet, I found an interesting file that contained the information we found in 'init.sat'. 
 
+![packet](https://github.com/Eunseo-Lee/Computer-Journey/blob/master/CTF%20Writeup/2019/Google%20CTF%20Beginners/Satellite/Screenshots/packet.PNG)
 
+Upon closer inspection, we can see the flag in the captured packet.
+We solved the problem!!
 
+##### Flag: CTF{4efcc72090af28fd33a2118985541f92e793477f} 
 
-
-#### Unintended Solution:
+### Unintended Solution:
 
 The `strings` command works with this challenge as well, and I'm pretty sure this is an unintended solution. 
 I solved the problem through this method first, then tried the method with Wireshark afterwards. 
